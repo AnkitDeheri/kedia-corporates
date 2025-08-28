@@ -1,12 +1,23 @@
-export const dynamicParams = false; // Disable dynamic rendering
+import BusinessClient from "@/components/business/BusinessClient";
+import React from "react";
+import { useRouter } from "next/router";
 
-export async function generateStaticParams() {
-  return [
-    { slug: 'microsoft' },
-    { slug: 'google' },
-  ];
+const BusinessClientPage = ({ slug }: { slug: string }) => {
+  return (
+    <div>
+      <BusinessClient slug={slug} />
+    </div>
+  );
+};
+
+export async function getServerSideProps(context: { params: { slug: string } }) {
+  const { slug } = context.params;
+
+  return {
+    props: {
+      slug,
+    },
+  };
 }
 
-export default function BusinessPage({ params }: { params: { slug: string } }) {
-  return <div>Business: {params.slug}</div>;
-}
+export default BusinessClientPage;
