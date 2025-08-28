@@ -150,7 +150,7 @@ const Navbar = () => {
                 },
               }}
             >
-              KEDIA CORPORATES123
+              KEDIA CORPORATES
             </Typography>
           </Link>
 
