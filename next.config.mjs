@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   //output: 'export', // Enables static export for Hostinger shared hosting
-  trailingSlash: true, // Helps with Hostinger routing
+  //trailingSlash: true, // Helps with Hostinger routing
   basePath: process.env.BASEPATH || '', // Optional: set base path if deploying to subdirectory
 
   // Disable image optimization for static export (Hostinger doesn't support Next.js server)
