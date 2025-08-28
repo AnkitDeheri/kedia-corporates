@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enables static export for Hostinger shared hosting
+  //output: 'export', // Enables static export for Hostinger shared hosting
   trailingSlash: true, // Helps with Hostinger routing
   basePath: process.env.BASEPATH || '', // Optional: set base path if deploying to subdirectory
 
